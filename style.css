@@ -45,11 +45,14 @@ body{
     color: white;
 }
 
+
+/* ------------- div 3 Korepi ------------*/
+
 .div3{
     padding-bottom: 10vw;
     background-image: none !important;
     background-color: #00000000 !important; 
-    overflow: clip;
+    /* overflow: clip; */
 }
 
 .div3::before {
@@ -136,7 +139,6 @@ body{
     padding-bottom: 1vw;
     font-size: 3vw;
     color: #8DFEA1;
-    transition: all 0.5s ease;
 }
 
 .more-menu > button{
@@ -184,3 +186,86 @@ body{
     bottom: 0;
 }
 
+/* ----------- div 4  A Superhuman Experience! ------------*/
+
+.div4{
+    background-image: url(images/flower4.png) !important;
+    background-position: center 0;
+}
+
+.div4 > h1{
+    position: relative;
+    color: #8DFEA1 !important;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+    z-index: 1;
+}
+
+.div4:hover > h1{
+    transform: translateX(-7vw);
+}
+
+.div4::after{
+    content: "";
+    width: 15.5vw;
+    height: 15.5vw;
+    background-color: #DB9AD700;
+    position: absolute;
+    scale: 1.2 0.5;
+    filter: blur(5vw);
+    /* backdrop-filter: blur(.1vw); */
+    border-radius: 100vw;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.div4:hover::after{
+    background-color: #DB9AD7;
+    transform: translateX(-7vw);
+}
+
+.blur-box{
+    --color: #ffffff0f;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #063a0f;
+    background: transparent;
+    /* clip-path: polygon(0 0, 0 100%, 100% 100%); */
+    backdrop-filter: blur(.4vw);
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+#first{
+    left: 0;
+    top: -100%;
+}
+#second{
+    right: 0;
+    bottom: -100%;
+}
+
+.div4:hover #first{
+    top: 0 !important;
+}
+.div4:hover #second{
+    bottom: 0 !important;
+}
+
+.div4 > ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    left: 64%;
+    list-style: none;
+    height: 100%;
+    width: 40%;
+    text-wrap: balance;
+}
+
+.div4 li{
+    /* padding-block: 1vw; */
+}
