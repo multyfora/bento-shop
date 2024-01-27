@@ -216,12 +216,13 @@ body{
     /* backdrop-filter: blur(.1vw); */
     border-radius: 100vw;
     transition: 0.5s;
-    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+    transform: translateX(-7vw);
+    transition-timing-function: cubic-bezier(.5, 0,.5, 1);
+    transition-delay: 0.1s;
 }
 
 .div4:hover::after{
     background-color: #DB9AD7;
-    transform: translateX(-7vw);
 }
 
 .blur-box{
@@ -260,12 +261,40 @@ body{
     align-items: flex-start;
     justify-content: space-evenly;
     left: 64%;
+    bottom: -100%;
     list-style: none;
     height: 100%;
     width: 40%;
     text-wrap: balance;
+    opacity: 0;
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 .div4 li{
-    /* padding-block: 1vw; */
+    cursor:default;
+    position: relative;
+    padding-block: 1.2vw;
+    margin-block: -1.2vw;
+    padding-inline-end: 2vw;
+    color: #8DFEDA;
+    font-weight: 600;
+    filter: drop-shadow(0 0 0.1vw #418670) drop-shadow(0 0 0.2vw #418670);
+    transition: all 0.3s;
+    border-top: #ffffff00 solid .3vw;
+    border-bottom: #ffffff00 solid .3vw;
+    border-radius: .4vw;
+    z-index: 1;
+}
+
+.div4 li:hover{
+    color: #063a0f;
+    border-top: #ffffff1f solid .3vw;
+    border-bottom: #ffffff1f solid .3vw;
+    filter: drop-shadow(0 0 0.1vw #8DFEDA) drop-shadow(0 0 0.2vw #8DFEDA) drop-shadow(0 0 0.4vw #8DFEDA) drop-shadow(0 0 0.5vw #8DFEDA);
+}
+
+.div4:hover ul{
+    opacity: 1;
+    bottom: 0;
 }
