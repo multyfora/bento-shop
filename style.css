@@ -90,7 +90,7 @@ body{
 
     transition: transform 0.5s;
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
-    /* transition-delay: .1s; */
+    /* transition-delay: .1s; */    
 }
 
 .div3:hover > img{
@@ -182,7 +182,6 @@ body{
 
 
 .more-menu:hover{
-    content: "a";
     bottom: 0;
 }
 
@@ -191,6 +190,8 @@ body{
 .div4{
     background-image: url(images/flower4.png) !important;
     background-position: center 0;
+    transition: all 1s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 .div4 > h1{
@@ -272,6 +273,7 @@ body{
 }
 
 .div4 li{
+    font-size: .9vw;
     cursor:default;
     position: relative;
     padding-block: 1.2vw;
@@ -297,4 +299,8 @@ body{
 .div4:hover ul{
     opacity: 1;
     bottom: 0;
+}
+
+.div4:hover{
+    background-position-y: bottom;
 }
