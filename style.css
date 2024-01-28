@@ -75,13 +75,13 @@ body{
 }
 
 .div3 > h1{
-    color: #8DFEA1 !important;
+    color: #FFFFFF !important;
     transition: filter 0.5s, transform 0.5s;
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 .div3:hover > h1{
-    filter: drop-shadow(0px 0px .3vw #41864e);
+    filter: drop-shadow(0px 0px .3vw #000000);
     transform: translateY(-4.5vw);
 }
 
@@ -103,7 +103,7 @@ body{
     text-align: center;
     text-wrap: balance;
     color: #eee;
-    filter: drop-shadow(0px 0px .1vw #063a0f);
+    filter: drop-shadow(0px 0px .1vw #000);
     font-weight: 600;
     font-size: 1vw;
     opacity: 0;
@@ -130,6 +130,7 @@ body{
     width: 100%;
     height: 60%;
     backdrop-filter: blur(.4vw);
+    -webkit-backdrop-filter: blur(.4vw);
     transition: all 0.5s;
     transition-timing-function:cubic-bezier(1, 0, 0, 1);
 }
@@ -138,10 +139,11 @@ body{
     padding-top: .6vw;
     padding-bottom: 1vw;
     font-size: 3vw;
-    color: #8DFEA1;
+    color: #FFFFFF;
 }
 
 .more-menu > button{
+    cursor: pointer;
     width: 70%;
     height: 17%;
     margin-bottom: .5vw;
@@ -151,6 +153,7 @@ body{
     font-weight: 600;
     color: white;
     backdrop-filter: blur(.4vw);
+    -webkit-backdrop-filter: blur(.4vw);
     border-radius: .5vw;
     transition: all 0.5s;
 }
@@ -177,7 +180,7 @@ body{
     transition: all 0.5s;
 }
 .more-menu > button:hover > p{
-    filter: drop-shadow(0px 0px 0.05vw #8DFEA1);
+    filter: drop-shadow(0px 0px 0.05vw #FFFFFF);
 }
 
 
@@ -196,34 +199,57 @@ body{
 
 .div4 > h1{
     position: relative;
-    color: #8DFEA1 !important;
+    color: #FFFFFF !important;
     transition: 0.5s;
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
     z-index: 1;
+    padding-block: 1vw;
 }
 
 .div4:hover > h1{
     transform: translateX(-7vw);
 }
 
+.div4 > h1::after{
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -0.1vw;
+    transform: translateX(50%);
+    background-image: url(images/klipartzcom_1.png);
+    filter: grayscale(1) contrast(100);
+    background-size: cover;
+    clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+    width: 50%;
+    height: 2vw;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+    transition-delay: 0.5s;
+}
+
+.div4:hover > h1::after{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 .div4::after{
     content: "";
-    width: 15.5vw;
-    height: 15.5vw;
+    width: 20vw;
+    height: 8vw;
     background-color: #DB9AD700;
     position: absolute;
-    scale: 1.2 0.5;
-    filter: blur(5vw);
+    filter: blur(3vw);
     /* backdrop-filter: blur(.1vw); */
     border-radius: 100vw;
-    transition: 0.5s;
     transform: translateX(-7vw);
+    transition: 0.5s;
     transition-timing-function: cubic-bezier(.5, 0,.5, 1);
     transition-delay: 0.1s;
 }
 
+
 .div4:hover::after{
-    background-color: #DB9AD7;
+    /* background-color: #834268; */
+    background-color: #2a2a2adf;
 }
 
 .blur-box{
@@ -231,10 +257,10 @@ body{
     position: absolute;
     height: 100%;
     width: 50%;
-    background-color: #063a0f;
     background: transparent;
     /* clip-path: polygon(0 0, 0 100%, 100% 100%); */
     backdrop-filter: blur(.4vw);
+    -webkit-backdrop-filter: blur(.4vw);
     transition: 0.5s;
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
 }
@@ -274,14 +300,14 @@ body{
 
 .div4 li{
     font-size: .9vw;
-    cursor:default;
+    cursor: pointer;
     position: relative;
     padding-block: 1.2vw;
     margin-block: -1.2vw;
     padding-inline-end: 2vw;
-    color: #8DFEDA;
+    color: #FFFFFF;
     font-weight: 600;
-    filter: drop-shadow(0 0 0.1vw #418670) drop-shadow(0 0 0.2vw #418670);
+    filter: drop-shadow(0 0 0.1vw #0000009f) drop-shadow(0 0 0.2vw #0000009f);
     transition: all 0.3s;
     border-top: #ffffff00 solid .3vw;
     border-bottom: #ffffff00 solid .3vw;
@@ -290,10 +316,10 @@ body{
 }
 
 .div4 li:hover{
-    color: #063a0f;
+    color: #2a2a2a;
     border-top: #ffffff1f solid .3vw;
     border-bottom: #ffffff1f solid .3vw;
-    filter: drop-shadow(0 0 0.1vw #8DFEDA) drop-shadow(0 0 0.2vw #8DFEDA) drop-shadow(0 0 0.4vw #8DFEDA) drop-shadow(0 0 0.5vw #8DFEDA);
+    filter: drop-shadow(0 0 0.1vw #FFFFFF) drop-shadow(0 0 0.2vw #FFFFFF) drop-shadow(0 0 0.4vw #FFFFFF) drop-shadow(0 0 0.5vw #FFFFFF);
 }
 
 .div4:hover ul{
