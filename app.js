@@ -22,6 +22,7 @@ const parent = document.getElementsByClassName("div1")[0];
 let isBig = false;
 for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener("click", function () {
+    if (event.target === cards[i]) {
     if (!isBig) {
       for (let j = 0; j < cards.length; j++) {
         if (j != i) {
@@ -37,14 +38,37 @@ for (let i = 0; i < cards.length; i++) {
       }
       isBig = false;
     }
+  }
   });
 }
 
 const cells = document.querySelectorAll(".card");
 
 cells.forEach((cell) => {
-  cell.addEventListener("click", () => {
-    cell.classList.toggle("fullscreen");
-    cell.sty;
-  });
+    cell.addEventListener("click", (event) => {
+        if (event.target === cell) {
+            cell.classList.toggle("fullscreen");
+        }
+    });
+});
+
+
+const video = document.querySelector(".video");
+const videoController = document.querySelector(".video-controller");
+const playButton = document.querySelector(".play-button");
+
+playButton.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+    playButton.innerHTML = '<img src="images/pause.svg" alt="pause">';
+} else {
+    video.pause();
+    playButton.innerHTML = '<img src="images/play.svg" alt="play">';
+}
+});
+
+
+videoController.addEventListener('input', () => {
+  const time = (video.duration * videoController.value) / 100;
+  video.currentTime = time;
 });
