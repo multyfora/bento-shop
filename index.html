@@ -8,9 +8,22 @@
     <link rel="icon" href="images/logo2.svg" />
   </head>
   <body>
+    
+    <div class="big-video big hidden">
+      <div class="backdrop big hidden"></div>
+        <video class="video big hidden">
+          <source src="videos/Teleport.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div id="big-play-button" class="play-button big hidden">
+          <img src="images/play.svg" alt="play" />
+        </div>
+        <input id="big-video-controller" type="range" min="0" max="1000" value="0" class="video-controller big hidden"></input>
+    </div>
+
+
     <div class="container">
       <div class="div1">
-        <!-- <h1>awesome div</h1> -->
 
         <div class="card g-div1">
           <img src="images/teleport.svg" alt="" />
@@ -28,15 +41,18 @@
           </p>
 
           <div class="video-wrapper">
-            <video class="video">
+            <video id="video" class="video">
               <source src="videos/Teleport.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-
+            <div class="fullscreen-button">
+              <img id="first" src="images/fullscreen.svg" alt="fullscreen" />
+              <img id="second" src="images/fullscreen.svg" alt="play" />
+            </div>
             <div id="play-button" class="play-button">
               <img src="images/play.svg" alt="play" />
             </div>
-            <input id="video-controller" type="range" min="0" max="100" value="0" class="video-controller"></input>
+            <input id="video-controller" type="range" min="0" max="1000" value="0" class="video-controller"></input>
           </div>
         </div>
 
